@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+	
+	<svg width="240" height="240" xmlns="http://www.w3.org/2000/svg">
+	    <!--第一个圆-->
+		<circle class="backdrop" r="90" cy="120" cx="120" stroke="#333" stroke-width="3" fill="yellow"/>
+		<!--绘制一个圆，r半径，cy、cx是圆心位置，stroke描边，fill填充颜色-->
+
+		<!--第二个圆-->
+		<circle class="progressa" r="90" cy="120" cx="120" stroke="url(#purple)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="yellow"/>
+		<!--
+            stroke-linecap 属性可以让你在线条末端控制图形。你可以选择对接(butt)、方形(square)和圆形(round)
+
+            stroke-linejoin 属性也是类似的，但是它控制的是两条线段之间的衔接。你可以在绘制折线时使用它。它有三个值，尖角(miter)、圆角(round)和斜角(bevel)
+		-->
+
+		<defs>
+			<linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="0%">
+			<!--
+                x1:渐变起始点x坐标
+                y1:渐变起始点y坐标
+                x2:渐变结束点x坐标
+                y2:渐变结束点y坐标
+
+
+                当 y1 和 y2 相等，而 x1 和 x2 不同时，可创建水平渐变
+                当 x1 和 x2 相等，而 y1 和 y2 不同时，可创建垂直渐变
+                当 x1 和 x2 不同，且 y1 和 y2 不同时，可创建角形渐变
+
+
+                <linearGradient> 标签的 id 属性可为渐变定义一个唯一的名称
+                fill:url(#orange_red) 属性把 ellipse 元素链接到此渐变
+                <linearGradient> 标签的 x1、x2、y1、y2 属性可定义渐变的开始和结束位置
+                渐变的颜色范围可由两种或多种颜色组成。每种颜色通过一个 <stop> 标签来规定。offset 属性用来定义渐变的开始和结束位置。
+
+
+			-->
+              <stop offset="0%" stop-color="#7a5bcf"/>
+              <stop offset="100%" stop-color="#8A6FD5"/>
+			<linearGradient/><!--线性渐变  <linearGradient> 标签必须嵌套在 <defs> 的内部-->
+		</defs><!--defs绘制的图形不能直接显示在svg里面，需要调用到指定位置-->
+	</svg>
+</body>
+</html>
