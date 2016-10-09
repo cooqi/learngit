@@ -19,6 +19,7 @@
 
       /*椭圆形*/
        .Oval{width: 100px;height: 50px;background:red;border-radius: 50px/25px;}
+       /*border-radius  斜线前为水平半径，斜线后为垂直半径*/
       /*椭圆形*/
 
       /*三角形*/
@@ -70,26 +71,40 @@
        .octagon:after{position: absolute;content: '';width:40px;border-width:  30px 30px 0 30px;border-style:solid;border-color: red transparent transparent transparent;left: 0;bottom: -30px;}
       /*八边形*/
 
-      /**/
-      /**/
+      /*心形*/
+       .heart{width: 35px;height: 60px;background: red;position: relative;border-radius: 35px 35px 0 0;transform: rotate(-45deg);}
+       .heart:before{content:'';width: 35px;height: 60px;background: red;position:absolute;border-radius: 35px 35px 0 0;transform: rotate(90deg);left:13px;top:13px;}
+      /*心形*/
 
-      /**/
-      /**/
+      /*无限符图形*/
+       .infinity{width: 200px;height: 100px;position: relative;}
+       .infinity:before,.infinity:after{content: '';position: absolute;width: 100px;height: 100px;border: 20px solid red;border-radius: 100px 100px 0 100px;transform: rotate(-45deg);}
+       .infinity:after{transform: rotate(135deg);left:170px;}
+      /*无限符图形*/
 
-      /**/
-      /**/
+      /*鸡蛋*/
+       .egg{width:120px;height: 180px;background: red;border-radius:  63px 63px 63px 63px / 108px 108px 72px 72px;margin-top: 50px}
+      /*鸡蛋*/
 
-      /**/
-      /**/
+      /*吃豆人*/
+       .pacman{width: 0;height: 0;border-width: 60px;border-style: solid;border-color: red transparent red red;border-radius: 60px;}/*和三角形的院里有点像，同理这样也可以绘制半圆和扇形*/
+      /*吃豆人*/
 
-      /**/
-      /**/
+      /*阴阳八卦*/
+       .yin-yang{width: 96px;height: 48px;background: #eee;border-color: red;border-style: solid;border-width: 2px 2px 50px 2px;border-radius: 100%;position: relative;}
+       .yin-yang:before,.yin-yang:after{content: '';position: absolute;width: 12px;height: 12px;border:18px solid red;left: 0;border-radius: 100%;top:24px;background: #eee;}
+       .yin-yang:after{right: 0;left:auto;border-color: #eee;background: red;}
+      /*阴阳八卦*/
 
-      /**/
-      /**/
+      /*月亮*/
+       .moon{width: 100px;height: 100px;border-radius: 100px;box-shadow: 15px 15px 0 0 red}
+       /*box-shadow：水平阴影的位置,垂直阴影的位置,模糊距离,阴影的尺寸,阴影的颜色*/
+      /*月亮*/
 
-      /**/
-      /**/
+      /*电视屏幕*/
+       .tv {position: relative;width: 200px;height: 150px;margin: 20px 0;background: red;border-radius: 50% / 10%;color: white;text-align: center;text-indent: .1em;}
+       .tv:before {content: '';position: absolute;top: 10%;bottom: 10%;right: -5%;left: -5%;background: blue;border-radius: 5% / 50%;}
+      /*电视屏幕*/
 
       /**/
       /**/
@@ -150,25 +165,32 @@
     <div class="octagon"></div>
    <!--八边形-->
 
-   <!---->
-   <!---->
+   <!--心形-->
+    <div class="heart"></div>
+   <!--心形-->
+
+   <!--无限符图形-->
+    <div class="infinity"></div>
+   <!--无限符图形-->
+
+   <!--鸡蛋-->
+    <div class="egg"></div>
+   <!--鸡蛋-->
+
+   <!--吃豆人-->
+    <div class="pacman"></div>
+   <!--吃豆人-->
+
+   <!--阴阳八卦-->
+    <div class="yin-yang"></div>
+   <!--阴阳八卦-->
+
+   <!--月亮-->
+    <div class="moon"></div>
+   <!--月亮-->
 
    <!---->
-   <!---->
-
-   <!---->
-   <!---->
-
-   <!---->
-   <!---->
-
-   <!---->
-   <!---->
-
-   <!---->
-   <!---->
-
-   <!---->
+    <div class="tv"></div>
    <!---->
 
    <!---->
