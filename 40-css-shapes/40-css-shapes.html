@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>史上最强大的40多个纯CSS绘制的图形</title>
+	<style>
+	 div{margin:30px auto;}
+      /*正方形*/
+       .square{width: 100px;height: 100px;background: red}
+      /*正方形*/
+
+      /*矩形*/
+       .Rectangle{width: 100px;height: 50px;background: red}
+      /*矩形*/
+
+      /*圆形*/
+       .circle{width: 100px;height: 100px;border-radius: 50px;background: red;}
+      /*圆形*/
+
+      /*椭圆形*/
+       .Oval{width: 100px;height: 50px;background:red;border-radius: 50px/25px;}
+      /*椭圆形*/
+
+      /*三角形*/
+       .triangle{width:0px;height:0px;border-width: 100px;border-style: solid;border-color: transparent transparent red transparent;}/*直角三角形*/
+       .triangle2{width: 0;height: 0;border-left: 50px solid transparent;border-right: 50px solid transparent;border-bottom: 100px solid red;}/*锐角三角形，两边的宽度大于底边的宽度，则是钝角三角形*/
+       .triangle3 {width: 0;height: 0;border-bottom: 100px solid red;border-right: 100px solid transparent;}/*左下直角三角形*/
+      /*三角形*/
+
+      /*弯尾箭头*/
+       .curvedarrow{width: 0;height: 0;border-width: 10px;border-style: solid;border-color: transparent transparent transparent red;transform: rotate(30deg);position: relative;}
+       .curvedarrow:before{position:absolute;content:'';width: 20px;height: 20px;border: 0 solid transparent;border-top: 3px solid red;border-radius: 20px 0 0 0;top:-3px;left:-30px;}
+      /*弯尾箭头*/
+
+      /*梯形*/
+       .trapezoid {width: 100px;height:0;border: 100px solid transparent;border-bottom-color: red}
+       .trapezoid2 {border-bottom: 100px solid red;border-left: 50px solid transparent;border-right: 50px solid transparent;height: 0;width: 100px;}/*方法二：设置左右边距可以控制提醒两腰的角度*/
+      /*梯形*/
+
+      /*平行四边形*/
+       .parallelogram{width: 100px;height: 80px;background: red;transform: skew(20deg);}
+      /*平行四边形*/
+
+      /*六角星*/
+       .star-six {width: 0;height: 0;border-left: 50px solid transparent;border-right: 50px solid transparent;border-bottom: 100px solid red;position: relative;}
+       .star-six:after {width: 0;height: 0;border-left: 50px solid transparent;border-right: 50px solid transparent;border-top: 100px solid red;position: absolute;content: "";top: 30px;left: -50px;}
+       /*绘制两个相对锐角三角形，叠加形成6角星*/
+      /*六角星*/
+
+      /*五角星*/
+      .star-five {margin: 50px 0;position: relative;display: block;color: red;width: 0px;height: 0px;border-right:  100px solid transparent;border-bottom: 70px  solid red;border-left:   100px solid transparent;transform:rotate(35deg);}/*绘制一个向右上的钝角三角形*/
+      .star-five:before {border-bottom: 80px solid red;border-left: 30px solid transparent;border-right: 30px solid transparent;position: absolute;height: 0;width: 0;top: -45px;left: -65px;display: block;content: '';transform: rotate(-35deg);}/*绘制一个向上的锐角三角形*/
+      .star-five:after {position: absolute;display: block;color: red;top: 3px;left: -105px;width: 0px;height: 0px;border-right: 100px solid transparent;border-bottom: 70px solid red;border-left: 100px solid transparent;transform: rotate(-70deg);content: '';}/*绘制一个向左上的钝角三角形*/
+      /*五角星*/
+
+      /*五边形*/
+       .pentagon{width: 0;height: 0;border-width:0 150px 100px 150px;border-style: solid;border-color: transparent transparent red transparent;position: relative;}/*绘制一个钝角三角形*/
+       .pentagon:before{position: absolute;content: '';width: 200px;border-width: 150px 50px 0 50px;border-style: solid;border-color: red transparent;left: -150px;top: 100px}/*绘制一个梯形*/
+      /*五边形*/
+
+      /*六边形*/
+      .hexagon {width: 100px;height: 55px;background: red;position: relative;margin-top:200px;}
+      .hexagon:before {content: "";position: absolute;top: -25px;left: 0;width: 0;height: 0;border-left: 50px solid transparent;border-right: 50px solid transparent;border-bottom: 25px solid red;}
+      .hexagon:after {content: "";position: absolute;bottom: -25px;left: 0;width: 0;height: 0;border-left: 50px solid transparent;border-right: 50px solid transparent;border-top: 25px solid red;}
+      /*六边形*/
+
+      /*八边形*/
+       .octagon{width: 100px;height: 40px;background: red;position: relative;margin:150px auto;}
+       .octagon:before{position: absolute;content: '';width:40px;border-width: 0 30px 30px 30px;border-style:solid;border-color: transparent transparent red transparent;left: 0;top: -30px;}
+       .octagon:after{position: absolute;content: '';width:40px;border-width:  30px 30px 0 30px;border-style:solid;border-color: red transparent transparent transparent;left: 0;bottom: -30px;}
+      /*八边形*/
+
+      /**/
+      /**/
+
+      /**/
+      /**/
+
+      /**/
+      /**/
+
+      /**/
+      /**/
+
+      /**/
+      /**/
+
+      /**/
+      /**/
+
+      /**/
+      /**/
+
+      /**/
+      /**/
+	</style>
+</head>
+<body>
+	<p>参考于http://www.codeceo.com/article/40-css-shapes.html</p>
+
+   <!--正方形-->
+    <div class="square"></div>
+   <!--正方形-->
+
+   <!--矩形-->
+    <div class="Rectangle"></div>
+   <!--矩形-->
+
+   <!--圆形-->
+    <div class="circle"></div>
+   <!--圆形-->
+
+   <!--椭圆形-->
+    <div class="Oval"></div>
+   <!--椭圆形-->
+
+   <!--三角形-->
+    <div class="triangle"></div>
+   <!--三角形-->
+
+   <!--弯尾箭头-->
+    <div class="curvedarrow"></div>
+   <!--弯尾箭头-->
+
+   <!--梯形-->
+    <div class="trapezoid"></div>
+   <!--梯形-->
+
+   <!--平行四边形-->
+    <div class="parallelogram"></div>
+   <!--平行四边形-->
+
+   <!--六角星-->
+    <div class="star-six"></div>
+   <!--六角星-->
+
+   <!--五角星-->
+    <div class="star-five"></div>
+   <!--五角星-->
+
+   <!--五边形-->
+    <div class="pentagon"></div>
+   <!--五边形-->
+
+   <!--六边形-->
+    <div class="hexagon"></div>
+   <!--六边形-->
+
+   <!--八边形-->
+    <div class="octagon"></div>
+   <!--八边形-->
+
+   <!---->
+   <!---->
+
+   <!---->
+   <!---->
+
+   <!---->
+   <!---->
+
+   <!---->
+   <!---->
+
+   <!---->
+   <!---->
+
+   <!---->
+   <!---->
+
+   <!---->
+   <!---->
+
+   <!---->
+   <!---->
+
+
+
+   <!---->
+   <!---->
+</body>
+</html>
