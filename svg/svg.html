@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>svg</title>
+	<style>
+      svg{width: 100%;height: 1000px}
+	</style>
+</head>
+<body>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+	  <!--圆-->
+		<circle cx="100" cy="100" r="40" stroke="red" stroke-width="3" fill="blue"/>
+		<!--
+		  cx和cy属性定义圆点的x和y坐标。如果省略cx和cy，圆的中心会被设置为(0, 0)
+		  r属性定义圆的半径
+		  stroke 轮廓颜色 stroke-width轮廓宽度 fill填充颜色
+		  //SVG提供了stroke-dasharray和stroke-dashoffset两个属性，它们可以将刚才的圆形的轮廓变成虚线
+
+		  //stroke-dasharray: 该属性控制路径中虚线的长度以及虚线间的距离。
+		  //stroke-dasharray:1,1 或者省略的写法 stroke-dasharray:1 ，第一个数字表示实线长度 1，第二个表示间隔长度 1，后面则循环；如果要加大间隔而不加长实线，则 stroke-dasharray:1,5
+
+		  //stroke-dashoffset :该属性指定了虚线开始时的偏移长度
+		  //正数从路径起始点向前偏移，负数则向后
+		-->
+	  <!--圆-->
+
+	  <!--椭圆-->
+	    <ellipse cx="300" cy="100" rx="100" ry="50" style="fill:yellow;stroke:red;stroke-width:2"/>
+	    <!--
+	      CX属性定义的椭圆中心的x坐标
+
+	      CY属性定义的椭圆中心的y坐标
+
+	      RX属性定义的水平半径
+
+	      RY属性定义的垂直半径
+	    -->
+	  <!--椭圆-->
+
+	  <!--直线-->
+	    <line x1="200" y1="200" x2="500" y2="500" style="stroke:rgb(255,0,0);stroke-width:2"/>
+	  <!--直线-->
+
+	  <!--多边形-->
+	    <polygon points="100,10 40,180 190,60 10,60 160,180" stroke="red" fill-rule="evenodd"/>
+	    <!--
+	      fill-rule 关于图形（或线条）的内部区域;它有 nonzero 和 evenodd 两个值
+	      官方定义太纠结我还没理解透大概总结下自己的理解
+	      nonzero是在图形上从某一点（这一点不是线条交汇点，是你要判断这个区域是在内外部的图形上的某一点）绘制一条线，看相交的线段的路径(是你绘制图形的路径方向)，从左到右+1.从右到左-1，最后结果是0，则说明这个点在外边，否则就是在里面
+	      evenodd是在图形上从某一点绘制一条线，看相交的线段的点数，奇数说明这一点在内部，否则在外边
+	    -->
+
+	    <!--points 是每个角的x、y坐标，用空格隔开-->
+	  <!--多边形-->
+
+	  <!--曲线-->
+	    <polyline points="20,20 40,25 60,30 120,120" stroke="blue" fill="none"/>
+	    <!--
+	      polygon和polyline很类似，但是polygon是闭合的多边形图形，但是polyline是不闭合的曲线
+	    -->
+	  <!--曲线-->
+
+	  <!--路径-->
+	   <path d="M150 0 L75 200 L255 200 Z" fill="red"/><!--它开始于位置150 0，到达位置75 200，然后从那里开始到225 200，最后在150 0关闭路径。-->
+	  <!--
+          M = moveto(M X,Y) ：将画笔移动到指定的坐标位置
+          L = lineto(L X,Y) ：画直线到指定的坐标位置
+          H = horizontal lineto(H X)：画水平线到指定的X坐标位置
+          V = vertical lineto(V Y)：画垂直线到指定的Y坐标位置
+          C = curveto(C X1,Y1,X2,Y2,ENDX,ENDY)：三次贝赛曲线
+          S = smooth curveto(S X2,Y2,ENDX,ENDY)
+          Q = quadratic Belzier curve(Q X,Y,ENDX,ENDY)：二次贝赛曲线
+          T = smooth quadratic Belzier curveto(T ENDX,ENDY)：映射
+          A = elliptical Arc(A RX,RY,XROTATION,FLAG1,FLAG2,X,Y)：弧线
+          Z = closepath()：关闭路径
+
+          *以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。
+	  -->
+	  <!--路径 表示还是好难理解啊-->
+
+	  <!--文字-->
+	    <text x="0" y="15" fill="red" transform="rotate(30 20,40)">hello world</text>
+
+       <!--文本路径-->
+	    <defs>
+	    	<path id="path1" d="M75,20 a1,1 0 0,0 100,0"/>
+	    </defs>
+	    <text x="0" y="100" fill="blue">
+	    	<textPath xlink:href="#path1">i love you</textPath>
+	    </text>
+	    <!---->
+
+	    <!--文本组合-->
+	     <text x="10" y="20" style="fill:red;">Several lines:
+	         <tspan x="10" y="45">First line</tspan>
+	         <tspan x="10" y="70">Second line</tspan>
+	     </text>
+	    <!--
+	     元素可以安排任何分小组与<tspan> 元素的数量。每个<tspan> 元素可以包含不同的格式和位置。几行文本(与 <tspan> 元素)
+
+	    -->
+
+	    <!--文本链接-->
+	      <a xlink:href="http://www.ziqiangxuetang.com/svg/" target="_blank">
+	          <text x="0" y="15" fill="red">I love SVG</text>
+	      </a>
+	    <!---->
+	  <!--文字-->
+
+
+
+
+
+	  <!---->
+	  <!---->
+	</svg>
+</body>
+</html>
