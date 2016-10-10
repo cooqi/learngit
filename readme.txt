@@ -7,3 +7,5 @@ haha
 svg_circle是svg绘制圆环，可以设置百分比，纯css
 
 40-css-shapes是40个纯css绘制的形状
+
+svg是svg一些基础的知识，用svg绘制一些矢量图形
