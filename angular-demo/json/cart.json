@@ -1,0 +1,8 @@
+{
+ "carts":[
+ {"id":1,"name":"iphone4","quantity":3,"prince":4000},
+ {"id":2,"name":"iphone5","quantity":5,"prince":5000},
+ {"id":3,"name":"iphone6","quantity":7,"prince":6000},
+ {"id":4,"name":"iphone7","quantity":9,"prince":7000}
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "products":[
+   {"id":1,"name":"iphone3","price":3200},
+   {"id":2,"name":"iphone4","price":4260},
+   {"id":3,"name":"iphone5","price":5200},
+   {"id":6,"name":"iphone6","price":3280},
+   {"id":9,"name":"iphone7","price":4280},
+   {"id":5,"name":"iphone8","price":5260}
+ ]
+}

@@ -1,0 +1,6 @@
+#filterTable table .dropup span{color: red;}
+#filterTable table th span{cursor: pointer;}
+#filterTable form{overflow: hidden;padding: 1px;margin:20px 0}
+#filterTable hr{background: #000;height: 1px;}
+.eventr{color: red;}
+.oddtr{color: blue;}
