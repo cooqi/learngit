@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no">	
+	<!--让手机端电话不默认样式-->
+	<meta name="format-detection" content="telphone=no, email=no"/>
+
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<!--flexible 是适配各终端插件-->
+	<script type="text/javascript" src="js/flexible.js"></script>
+	<script type="text/javascript" src="js/flexible_css.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css"><!--首页+登录的单独样式-->
+</head>
+<body>
+
+	    <div class="head">
+			<a href="" class="logo"><embed src="images/logo-white.svg" type=""></a>
+			<span class="more-nav"></span>
+		</div><!--head-->
+		<div class="nav-show" style="display:none">
+			 <div class="nav-top">
+				<p><a href="">一键发布需求</a></p>
+				<span class="nav-close"></span>
+			 </div>
+			 <ul>
+				<li><a href="">导航1</a></li>
+				<li><a href="">导航2</a></li>
+				<li><a href="">导航3</a></li>
+				<li><a href="">导航4</a></li>
+				<li><a href="">导航5</a></li>
+				<li><a href="">导航6</a></li>
+			 </ul>
+		 </div><!--隐藏导航-->
+		 <script>
+                          $('.more-nav').click(function(){
+                          	$('.nav-show').show();
+                          })
+                          $('.nav-close').click(function(){
+                          	$('.nav-show').hide();
+                          })
+		 </script>
+		 <!--head end-->
+
+		 <div class="index-page post">
+           <img src="images/index-head-bg.jpg" alt="" class="post-bg">
+		  <div class="post-xq">
+		  	<div class="post-req">
+		  		<a href="">
+		  		  <img src="images/post.jpg" alt="">
+		  		  <div><p>一键发布需求</p></div>
+		  		</a>
+		  	</div>
+		  </div><!--中间发布需求的按钮-->
+
+            <div class="bot-post">
+            	<dl>
+            		<dd class="post-company"><a href=""><i></i>企业发布需求</a></dd>
+            		<dd class="tester-pro"><a href=""><i></i>测试员接项目</a></dd>
+            	</dl>
+            </div><!--底部发布需求按钮-->
+
+		 </div><!--发布需求-->
+
+
+		 <div class="index-page red-packets">
+		 	<h3>您发项目，我贴钱</h3>
+		 	<p>项目成单后空心立返50%项目金到您的支付宝</p>
+		 	<img src="images/qiang.png" alt="" class="qiang">
+		 </div><!--抢红包-->
+
+		 <div class="index-page order-experience">
+		 	<img src="images/free-order.png" alt="">
+		 	<h3>预约免费体验</h3>
+		 	<p>空心科技致力改善软件测试行业，为企业用户提供规范、高效、专业的测试服务。现为企业提供<span>一百份</span>体验名额，立即预约免费体验空心软件测试云平台！</p>
+		 	<span class="order-now"><a href="">立即预约</a></span>
+		 </div><!--预约免费体验-->
+
+		 <div class="index-page focus-weChat">
+		 	<p>微信关注公众号“空心科技”</p>
+		 	<p>获得便捷服务，了解最新动态！</p>
+		 </div><!--关注微信--> 
+
+		 <div class="footer">
+		 	<embed src="images/logo-white.svg" type="" class="foot-logo">
+		 	<ul class="contact">
+		 		<li class="phone">177-0178-8165</li>
+		 		<li class="email">kongxin@Kongxkj.com</li>
+		 	</ul>
+		 	<p class="company-adress">北京&nbsp;|&nbsp;上海&nbsp;|&nbsp;武汉</p>
+		 	<p class="copyright">Copyright©2016 空心科技</p>
+		 </div><!--foot-->
+	
+</body>
+</html>

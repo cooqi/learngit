@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心--测试员</title>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<!--flexible 是适配各终端插件-->
+	<script type="text/javascript" src="js/flexible.js"></script>
+	<script type="text/javascript" src="js/flexible_css.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>               
+<body>
+	<div class="content project tester-zoe">
+	    <div class="head">
+			<a href="" class="logo"><embed src="images/logo-white.svg" type=""></a>
+			<span class="more-nav"></span>
+		</div><!--head-->
+		<div class="nav-show" style="display:none">
+			 <div class="nav-top">
+				<p><a href="">一键发布需求</a></p>
+				<span class="nav-close"></span>
+			 </div>
+			 <ul>
+				<li><a href="">导航1</a></li>
+				<li><a href="">导航2</a></li>
+				<li><a href="">导航3</a></li>
+				<li><a href="">导航4</a></li>
+				<li><a href="">导航5</a></li>
+				<li><a href="">导航6</a></li>
+			 </ul>
+		 </div>
+		 <script>
+                          $('.more-nav').click(function(){
+                          	$('.nav-show').show();
+                          })
+                          $('.nav-close').click(function(){
+                          	$('.nav-show').hide();
+                          })
+		 </script>
+		<div class="company-zoe personal">
+			<div class="zoe-head">
+				<img src="images/com-img.jpg" alt="" class="zoe-head-bg">
+				<p class="zlpm">站内排名<span>12</span></p>
+				<div class="com-detail">
+					<dl>
+						<dd class="com-img"><img src="images/win.png" alt=""></dd>
+						<dd class="com-base">
+							<h3>KOAN HK</h3>
+							<div class="com-score">
+							    <!--手机微信学历身份认证-->
+								<div class="com-equipment"><img src="images/phone-has.svg" alt=""><img src="images/wechat-has.svg" alt=""><img src="images/sf-has.svg" alt=""><img src="images/edu-has.svg" alt=""></div>
+                                 
+                                 <!--等级星星-->
+								<div class="company-grade"><img src="images/start-yellow.png" alt=""><img src="images/start-yellow.png" alt=""><img src="images/start-yellow.png" alt=""><img src="images/start-yellow.png" alt=""><img src="images/start-gray.png" alt=""><span class="com-pf">4.0</span></div>
+							</div>
+						</dd>
+					</dl>
+					<p class="com-vip-lev"><img src="images/lev-white1.png" alt="">会员</p>
+				</div>
+			
+			</div><!--个人信息head-->
+
+			<div class="com-project">
+				<dl>
+					<dd>
+						<h3>进行中的项目</h3>
+						<p>1</p>
+					</dd>
+					<dd>
+						<h3>发布过的项目</h3>
+						<p>5</p>
+					</dd>
+					<dd>
+						<h3>当前身价（元）</h3>
+						<p class="current-price">150/天</p>
+					</dd>
+				</dl>
+			</div><!--个人项目-->
+
+
+            <!--此区域个人和企业一样所以调用样式均一样-->
+			<div class="personal-center">
+				<p class="my-home"><a href=""><i></i>我的主页</a></p>
+				<p class="my-project"><a href=""><i></i>我的项目</a></p>
+				<p class="my-account"><a href=""><i></i>账户查询</a></p>
+
+				<span class="log-out">退出登录</span>
+			</div><!--主页项目查询-->
+
+		</div>
+           
+	</div>
+</body>
+</html>

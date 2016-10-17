@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心--账户查询</title>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<!--flexible 是适配各终端插件-->
+	<script type="text/javascript" src="js/flexible.js"></script>
+	<script type="text/javascript" src="js/flexible_css.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>               
+<body>
+	<div class="content project account-enquiry">
+		<div class="head">
+			<a href="" class="logo"><embed src="images/logo-white.svg" type=""></a>
+			<span class="more-nav"></span>
+		</div><!--head-->
+		<div class="nav-show" style="display:none">
+			 <div class="nav-top">
+				<p><a href="">一键发布需求</a></p>
+				<span class="nav-close"></span>
+			 </div>
+			 <ul>
+				<li><a href="">导航1</a></li>
+				<li><a href="">导航2</a></li>
+				<li><a href="">导航3</a></li>
+				<li><a href="">导航4</a></li>
+				<li><a href="">导航5</a></li>
+				<li><a href="">导航6</a></li>
+			 </ul>
+		 </div>
+		 <script>
+                          $('.more-nav').click(function(){
+                          	$('.nav-show').show();
+                          })
+                          $('.nav-close').click(function(){
+                          	$('.nav-show').hide();
+                          })
+		 </script>
+          
+
+
+		<div class="checks">
+		  <div class="balance">
+		  	<h3>账户余额（元）</h3>
+		  	<h4>123,414.00</h4>
+		  </div>
+		</div><!--账户余额-->
+
+          <dl class="statement">
+		  	<dd><p>待支付金额（元）</p><span>1,214.00</span></dd>
+		  	<dd><p>冻结金额（元）</p><span>43,414.00</span></dd>
+		  </dl><!--明细-->
+
+		<div class="account-record">
+			<ul class="record-tab">
+				<li class="act">全部记录</li>
+				<li>收入记录</li>
+				<li>支出记录</li>
+			</ul>
+
+			<div class="record">
+			    <h3>共计：15项</h3>
+				<dl class="income"><!--收入加income的class-->
+					<dd class="rec-left">
+						<h4>收入</h4>
+						<p><span>[结算]</span>中国石化业务管理..</p>
+					</dd>
+					<dd class="rec-right">
+						<h4>+￥14.00</h4>
+						<p>2016.05.27 15:23:33</p>
+					</dd>
+				</dl>
+				<dl class="expend"><!--支出加expend的class-->
+					<dd class="rec-left">
+						<h4>支出</h4>
+						<p><span>[结算]</span>中国石化业务管理..</p>
+					</dd>
+					<dd class="rec-right">
+						<h4>-￥14.00</h4>
+						<p>2016.05.27 15:23:33</p>
+					</dd>
+				</dl>
+				<dl class="income">
+					<dd class="rec-left">
+						<h4>收入</h4>
+						<p><span>[结算]</span>中国石化业务管理..</p>
+					</dd>
+					<dd class="rec-right">
+						<h4>+￥14.00</h4>
+						<p>2016.05.27 15:23:33</p>
+					</dd>
+				</dl>
+			</div><!--tab01全部记录-->
+
+			<div class="record" style="display: none;">
+				<h3>共计：<span class="amount">￥364.00</span>15项</h3>
+				<dl class="income">
+					<dd class="rec-left">
+						<h4>收入</h4>
+						<p><span>[结算]</span>中国石化业务管理..</p>
+					</dd>
+					<dd class="rec-right">
+						<h4>+￥14.00</h4>
+						<p>2016.05.27 15:23:33</p>
+					</dd>
+				</dl>
+				<dl class="income">
+					<dd class="rec-left">
+						<h4>收入</h4>
+						<p><span>[结算]</span>中国石化业务管理..</p>
+					</dd>
+					<dd class="rec-right">
+						<h4>-￥14.00</h4>
+						<p>2016.05.27 15:23:33</p>
+					</dd>
+				</dl>
+				<dl class="income">
+					<dd class="rec-left">
+						<h4>收入</h4>
+						<p><span>[结算]</span>中国石化业务管理..</p>
+					</dd>
+					<dd class="rec-right">
+						<h4>+￥14.00</h4>
+						<p>2016.05.27 15:23:33</p>
+					</dd>
+				</dl>
+			</div><!--tab02收入记录-->
+
+			<div class="record" style="display: none;">
+				<h3>共计：<span class="amount">￥364.00</span>15项</h3>
+				<dl class="expend">
+					<dd class="rec-left">
+						<h4>支出</h4>
+						<p><span>[结算]</span>中国石化业务管理..</p>
+					</dd>
+					<dd class="rec-right">
+						<h4>+￥14.00</h4>
+						<p>2016.05.27 15:23:33</p>
+					</dd>
+				</dl>
+				<dl class="expend">
+					<dd class="rec-left">
+						<h4>支出</h4>
+						<p><span>[结算]</span>中国石化业务管理..</p>
+					</dd>
+					<dd class="rec-right">
+						<h4>-￥14.00</h4>
+						<p>2016.05.27 15:23:33</p>
+					</dd>
+				</dl>
+				<dl class="expend">
+					<dd class="rec-left">
+						<h4>支出</h4>
+						<p><span>[结算]</span>中国石化业务管理..</p>
+					</dd>
+					<dd class="rec-right">
+						<h4>+￥14.00</h4>
+						<p>2016.05.27 15:23:33</p>
+					</dd>
+				</dl>
+			</div><!--tab03支出记录-->
+         
+		</div><!--记录-->
+		<script>
+		//tab
+			$('.record-tab li').click(function(){
+                  var i=$(this).index();
+               $(this).addClass('act').siblings().removeClass('act');
+               $('.record').eq(i).show().siblings('.record').hide();
+			})
+		</script>
+  
+	</div>
+</body>
+</html>

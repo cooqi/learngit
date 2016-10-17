@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>钱包－积分K币概览</title>
+<link href="css/animate.min.css" type="text/css" rel="stylesheet" />
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+<link href="css/style.min.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div class='wallet_integral_view'>
+
+  <!--wallet_head start-->
+  <div class='wallet_public_border integral_view_head'>
+    <div class='view_current_kb'>
+      <div class='view_current_title'> <embed src="images/kb01.svg" type="image/svg+xml" width="30" height="30"/><span>当前K币</span><embed src="images/kb02.svg" type="image/svg+xml" width="18" height="18"/></div>
+     <p>714</p>
+    </div>
+    <div class='wallet_buy_kb'>
+     <p><a href="#">购买K币</a></p>
+    </div>
+  </div><!--wallet_head end-->
+  
+  
+  <!--All Records start-->
+  <div class='wallet_all_records wallet_public_border'>
+  <p>所有记录</p>
+    <table class="wallet_records">
+      <tr>
+      <th>信息</th><th>数量</th><th>日期</th>
+      </tr>
+      <tr>
+      <td class="tdwidthone">项目结算</td><td><span class="wallet_z">+¥2000积分</span></td><td class="tdwidth">2016-02-15 13:47</td>
+      </tr>
+      <tr>
+      <td>项目评价</td><td><span class="wallet_z">+¥200积分</span></td><td>2016-02-15 13:47</td>
+      </tr>
+      <tr>
+      <td>资料完整</td><td><span class="wallet_z">+¥200积分</span></td><td>2016-02-15 13:47</td>
+      </tr>
+      <tr>
+      <td>K币兑换</td><td><span class="wallet_f">-¥10000积分</span></td><td>2016-02-15 13:47</td>
+      </tr>
+      <tr>
+      <td>积分兑换</td><td><span class="wallet_z">+20K币</span></td><td>2016-02-15 13:47</td>
+      </tr>
+      <tr>
+      <td>在线充值</td><td><span class="wallet_z">+600K币</span></td><td>2016-02-15 13:47</td>
+      </tr>
+      <tr>
+      <td>购买道具（超级标）</td><td><span class="wallet_f">-200K币</span></td><td>2016-02-15 13:47</td>
+      </tr>
+    </table>
+    
+    <div class="wallet_page">
+     <dl>
+     <dd class="wallet_pre_page"><a href="#">上一页</a></dd><dd class="wallet_present_page">1</dd><dd class="wallet_next_page"><a href="#">下一页</a></dd><dd class="wallet_total_page">1/1</dd><dd><input type="text"  class="wallet_page_search"/></dd><dd><input type="button" value="跳转" class="wallet_page_button"/></dd>
+     </dl>
+    </div><!--page-->
+    
+  </div><!--All Records end-->
+  
+</div><!--main-->
+
+
+<p style="margin:100px 0; text-align:center;color:red; font-size:24px;">以下是积分k币概览页面的弹出框内容</p>
+
+<!--弹框开始-->
+<div class="view_pop-up_box">
+  <h3>购买K币</h3>
+
+  <form class="buyKb_form" name="form1" method="post" action="">
+     <h4>购买数量：</h4>
+<fieldset class="buyKb_form_radio">
+         <input type="radio" name="buyKb_RadioGroup" value="500K币" id="buyKb_RadioGroup1" class="regular-radio" checked/><label for="buyKb_RadioGroup1">500K币</label>
+
+
+         <input type="radio" name="buyKb_RadioGroup" value="3000K币" id="buyKb_RadioGroup2" class="regular-radio"/><label for="buyKb_RadioGroup2">3000K币</label>
+
+         <input type="radio" name="buyKb_RadioGroup" value="" id="buyKb_RadioGroup3" class="regular-radio"/><label for="buyKb_RadioGroup3">其他<input type="text"  class="buyKb_other"/>K币</label>
+</fieldset>
+         
+         <p>（1元RMB=100K币）</p>
+<input type="button" value="购买" class="buyKb_button"/>
+  </form>
+  
+</div><!--弹框结束-->
+
+</body>
+</html>

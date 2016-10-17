@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>活动--50%返现</title>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<!--flexible 是适配各终端插件-->
+	<script type="text/javascript" src="js/flexible.js"></script>
+	<script type="text/javascript" src="js/flexible_css.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<body>
+
+	<div class="content project">
+		<div class="head">
+			<a href="" class="logo"><embed src="images/logo.svg" type=""></a>
+			<span class="more-nav"></span>
+		</div><!--head-->
+		<div class="nav-show" style="display:none">
+			 <div class="nav-top">
+				<p><a href="">一键发布需求</a></p>
+				<span class="nav-close"></span>
+			 </div>
+			 <ul>
+				<li><a href="">导航1</a></li>
+				<li><a href="">导航2</a></li>
+				<li><a href="">导航3</a></li>
+				<li><a href="">导航4</a></li>
+				<li><a href="">导航5</a></li>
+				<li><a href="">导航6</a></li>
+			 </ul>
+		 </div>
+		 <script>
+                          $('.more-nav').click(function(){
+                          	$('.nav-show').show();
+                          })
+                          $('.nav-close').click(function(){
+                          	$('.nav-show').hide();
+                          })
+		 </script>
+
+           
+          <div class="activity">
+            <div class="get-cash">
+              <h4>您已成功领取</h4>
+              <h3>[50%返现券]</h3>
+              <p class="act-tips">项目完成后，空心会将总项目的50%返还至您的支付宝！</p>
+            </div><!--领券提示-->
+
+            <div class="act-deadline">
+              <p>距活动截止仅剩</p>
+              <div class="countdown"></div><!--此处是时间倒计时插件区域-->
+            </div><!--活动截止时间-->
+
+            <div class="publish-pro">
+               <form action="">
+                 <p>测试类型<span>（可多选）</span></p>
+                 <ul>
+                   <li><input type="checkbox" id="checkbox-1-1" class="regular-checkbox"><label for="checkbox-1-1">功能测试</label></li>
+                   <li><input type="checkbox" id="checkbox-1-2" class="regular-checkbox"><label for="checkbox-1-2">自动化测试</label></li>
+                   <li><input type="checkbox" id="checkbox-1-3" class="regular-checkbox"><label for="checkbox-1-3">性能测试</label></li>
+                   <li><input type="checkbox" id="checkbox-1-4" class="regular-checkbox"><label for="checkbox-1-4">安全测试</label></li>
+                   <li><input type="checkbox" id="checkbox-1-5" class="regular-checkbox"><label for="checkbox-1-5">其他测试</label></li>
+                 </ul>
+
+                 <p>姓名</p>
+                 <input type="text" placeholder="企业联系人">
+
+                 <p>手机</p>
+                 <input type="text" placeholder="请输入常用手机号">
+
+                 <dl>
+                   <dd><input type="text" placeholder="请输入验证码"></dd>
+                   <dd><span>获取验证码</span></dd>
+                 </dl>
+
+                 <input type="submit" value="发布项目需求" class="submit">
+               </form>
+            </div><!--发布项目需求-->
+
+            <div class="act-rule">
+              <h3>返现活动规则</h3>
+              <ul>
+                <li>每个手机号码仅有一次参与机会</li>
+                <li>从活动页面提交申请方可参与</li>
+                <li>无偿提供测试管家服务，并全程管控</li>
+                <li>用户需遵守 《空心科技服务协议》</li>
+                <li>空心需对项目有效性进行评估，对涉嫌作弊，违规的项目，空心有权取消资格</li>
+                <li>项目结束后，按照项目金额的50%比例，将返现至平台帐户，可随时提现</li>
+                <li>最终解释权归 空心科技 所有</li>
+              </ul>
+            </div><!--活动规则-->
+
+          </div>
+
+            <div class="foot">
+            	<a href="" class="foot-logo"><embed src="images/logo-white.svg" type=""></a>
+            	<p>Copyright 2016空心科技</p>
+            </div><!--foot-->
+          </div>
+	
+</body>
+</html>

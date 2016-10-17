@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>活动--免费体验</title>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<!--flexible 是适配各终端插件-->
+	<script type="text/javascript" src="js/flexible.js"></script>
+	<script type="text/javascript" src="js/flexible_css.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<body>
+
+	<div class="content project">
+		<div class="head">
+			<a href="" class="logo"><embed src="images/logo.svg" type=""></a>
+			<span class="more-nav"></span>
+		</div><!--head-->
+		<div class="nav-show" style="display:none">
+			 <div class="nav-top">
+				<p><a href="">一键发布需求</a></p>
+				<span class="nav-close"></span>
+			 </div>
+			 <ul>
+				<li><a href="">导航1</a></li>
+				<li><a href="">导航2</a></li>
+				<li><a href="">导航3</a></li>
+				<li><a href="">导航4</a></li>
+				<li><a href="">导航5</a></li>
+				<li><a href="">导航6</a></li>
+			 </ul>
+		 </div>
+		 <script>
+                          $('.more-nav').click(function(){
+                          	$('.nav-show').show();
+                          })
+                          $('.nav-close').click(function(){
+                          	$('.nav-show').hide();
+                          })
+		 </script>
+
+           
+          <div class="feedback">
+            <form action="">
+              <textarea placeholder="请输入您的宝贵意见"></textarea>
+              <input type="submit" value="提交意见" class="submit">
+            </form>
+            <p class="contact-phone">联系电话：177-0178-8165</p>
+          </div>
+
+          <!--提交成功、失败提示-->
+          <!--成功 succeed-->
+          <div class="pop-up-box succeed">
+            <div class="prompt">
+              <h3>提交成功</h3>
+              <p class="prompt-word">您所提交的每一份意见，空心都将认真改进。</p>
+              <p class="back">返回</p>
+              <p class="contact-phone">联系电话：177-0178-8165</p>
+            </div>
+          </div>
+
+          <!--失败 failure-->
+          <div class="pop-up-box failure">
+            <div class="prompt">
+              <h3>提交失败</h3>
+              <p class="prompt-word">非常抱歉，网络君开小差了～</p>
+              <p class="back">返回</p>
+              <p class="contact-phone">联系电话：177-0178-8165</p>
+            </div>
+          </div>
+
+
+          </div>
+	
+</body>
+</html>

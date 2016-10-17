@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>活动--发布需求</title>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<!--flexible 是适配各终端插件-->
+	<script type="text/javascript" src="js/flexible.js"></script>
+	<script type="text/javascript" src="js/flexible_css.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<body>
+
+	<div class="content project">
+		<div class="head">
+			<a href="" class="logo"><embed src="images/logo.svg" type=""></a>
+			<span class="more-nav"></span>
+		</div><!--head-->
+		<div class="nav-show" style="display:none">
+			 <div class="nav-top">
+				<p><a href="">一键发布需求</a></p>
+				<span class="nav-close"></span>
+			 </div>
+			 <ul>
+				<li><a href="">导航1</a></li>
+				<li><a href="">导航2</a></li>
+				<li><a href="">导航3</a></li>
+				<li><a href="">导航4</a></li>
+				<li><a href="">导航5</a></li>
+				<li><a href="">导航6</a></li>
+			 </ul>
+		 </div>
+		 <script>
+                          $('.more-nav').click(function(){
+                          	$('.nav-show').show();
+                          })
+                          $('.nav-close').click(function(){
+                          	$('.nav-show').hide();
+                          })
+		 </script>
+
+           
+          <div class="activity release">
+            
+            <div class="com-release">
+              <p>我是企业，我需要发布需求</p>
+            </div><!--头部-->
+
+            <div class="publish-pro">
+               <form action="">
+                 <p>测试类型<span>（可多选）</span></p>
+                 <ul>
+                   <li><input type="checkbox" id="checkbox-1-1" class="regular-checkbox"><label for="checkbox-1-1">功能测试</label></li>
+                   <li><input type="checkbox" id="checkbox-1-2" class="regular-checkbox"><label for="checkbox-1-2">自动化测试</label></li>
+                   <li><input type="checkbox" id="checkbox-1-3" class="regular-checkbox"><label for="checkbox-1-3">性能测试</label></li>
+                   <li><input type="checkbox" id="checkbox-1-4" class="regular-checkbox"><label for="checkbox-1-4">安全测试</label></li>
+                   <li><input type="checkbox" id="checkbox-1-5" class="regular-checkbox"><label for="checkbox-1-5">其他测试</label></li>
+                   <li class="other" style="display: none;"><input type="text" placeholder="请填写其他测试内容"></li>
+                 </ul>
+
+                 <p>姓名</p>
+                 <input type="text" placeholder="企业联系人">
+
+                 <p>手机</p>
+                 <input type="text" placeholder="请输入常用手机号">
+
+                 <dl>
+                   <dd><input type="text" placeholder="请输入验证码"></dd>
+                   <dd><span>获取验证码</span></dd>
+                 </dl>
+                 
+                 <div class="read"><input type="checkbox" id="agreement" class="agreement"><label for="agreement"></label><span><a href="">空心科技服务协议</a></span></div>
+
+                 <input type="submit" value="发布项目需求" class="submit">
+               </form>
+            </div><!--发布项目需求-->
+
+            <script>
+            //选择其他测试的时候显示输入框
+            $('#checkbox-1-5').click(function(){
+              console.log($(this))
+              if($(this).is(':checked')){
+                $('.other').show();
+              }else{
+                $('.other').hide();
+              }
+            })
+              
+            </script>
+
+          </div>
+           
+
+            <div class="foot">
+            	<a href="" class="foot-logo"><embed src="images/logo-white.svg" type=""></a>
+            	<p>Copyright 2016空心科技</p>
+            </div><!--foot-->
+          </div>
+	
+</body>
+</html>

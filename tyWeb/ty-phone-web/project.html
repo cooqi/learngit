@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>项目集市</title>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<!--flexible 是适配各终端插件-->
+	<script type="text/javascript" src="js/flexible.js"></script>
+	<script type="text/javascript" src="js/flexible_css.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>               
+<body>
+	<div class="content project">
+		<div class="head">
+			<a href="" class="logo"><embed src="images/logo.svg" type=""></a>
+			<span class="more-nav"></span>
+		</div><!--head-->
+		<div class="nav-show" style="display:none">
+			 <div class="nav-top">
+				<p><a href="">一键发布需求</a></p>
+				<span class="nav-close"></span>
+			 </div>
+			 <ul>
+				<li><a href="">导航1</a></li>
+				<li><a href="">导航2</a></li>
+				<li><a href="">导航3</a></li>
+				<li><a href="">导航4</a></li>
+				<li><a href="">导航5</a></li>
+				<li><a href="">导航6</a></li>
+			 </ul>
+		 </div>
+		 <script>
+                          $('.more-nav').click(function(){
+                          	$('.nav-show').show();
+                          })
+                          $('.nav-close').click(function(){
+                          	$('.nav-show').hide();
+                          })
+		 </script>
+
+		<div class="company-release">
+			<a href=""><p><i></i>企业发布需求</p></a>
+		</div><!--企业发布需求-->
+
+		<div class="project-con">
+			<dl class="pro-select">
+				<dd>
+				  <span>所有状态</span>
+				  <ul style="display:none">
+				  	<li>招募中</li>
+				  	<li>测试中</li>
+				  	<li>已完成</li>
+				  </ul>
+				</dd>
+				<dd>
+				  <span>项目类型</span>
+				  <ul style="display:none">
+				  	<li>APP</li>
+				  	<li>B/S</li>
+				  	<li>C/S</li>
+				  	<li>Service</li>
+				  </ul>
+				</dd>
+				<dd>
+				<span>测试类型</span>
+				  <ul style="display:none">
+				  	<li>功能</li>
+				  	<li>性能</li>
+				  	<li>安全</li>
+				  	<li>自动化</li>
+				  	<li>其他</li>
+				  </ul>
+				</dd>
+			</dl>
+			<script>
+                                 $('.pro-select span').each(function(){
+                                 	$(this).click(function(){
+                                 		$(this).next('ul').toggle()
+                                 	})
+                                 })
+			</script>
+
+                              
+			<div class="project-list">
+				<div class="pro-list">
+				<a href="">
+				   <div class="pro-detail">
+				   	<div class="pro-imgbg"></div>
+				   	<div class="pro-imgbg"></div>
+					<img src="images/pro-img.png" alt="">
+					 <h3>USee视频聊天应用测试一、项目描述usee是一个在线直播视频web应用，需要在项目给定的框架上进行特定功USee视频聊天应用测试一、项目描述usee是一个在线直播视频web应用，需要在项目给定的框架上进行特定功聊天应用测试一、项目描述use...</h3>
+					 <p><i></i>55</p>
+					 <span>招募中</span>
+				   </div>
+				   <h3 class="pro-title">USee视频聊天应用测试<span>保证金</span></h3>
+				   <div class="pro-price">
+				   	<h2>￥5,000-6,000</h2>
+				   	<p><i></i>1/5</p>
+				   </div>
+				   <dl class="pro-function">
+				   	<dd>功能、安全</dd>
+				   	<dd>21人报名</dd>
+				   </dl>
+				   <dl class="pro-des">
+				   	<dd class="type"><i><img src="images/APP.svg" alt=""></i>C/S</dd>
+				   	<dd>项目周期<span>30</span>天</dd>
+				   </dl>
+				   </a>
+				</div>
+
+				<div class="pro-list">
+				<a href="">
+				   <div class="pro-detail">
+				   	<div class="pro-imgbg"></div>
+					<img src="images/pro-img.png" alt="">
+					 <h3>USee视频聊天应用测试一、项目描述usee是一个在线直播视频web应用，需要在项目给定的框架上进行特定功...</h3>
+					 <p><i></i>55</p>
+					 <span>测试中</span>
+				   </div>
+				   <h3 class="pro-title">USee视频聊天应用测试<span>保证金</span></h3>
+				   <div class="pro-price">
+				   	<h2>￥5,000-6,000</h2>
+				   	<p><i></i>5/5</p>
+				   </div>
+				   <dl class="pro-function">
+				   	<dd>功能、安全</dd>
+				   	<dd>21人报名</dd>
+				   </dl>
+				   <dl class="pro-des">
+				   	<dd class="type"><i><img src="images/APP.svg" alt=""></i>APP</dd>
+				   	<dd>项目周期<span>30</span>天</dd>
+				   </dl>
+				   </a>
+				</div>
+
+				<div class="pro-list">
+				<a href="">
+				   <div class="pro-detail">
+				   	<div class="pro-imgbg"></div>
+					<img src="images/pro-img.png" alt="">
+					 <h3>USee视频聊天应用测试一、项目描述usee是一个在线直播视频web应用，需要在项目给定的框架上进行特定功...</h3>
+					 <p><i></i>55</p>
+					 <span>已完成</span>
+				   </div>
+				   <h3 class="pro-title">USee视频聊天应用测试<span>保证金</span></h3>
+				   <div class="pro-price">
+				   	<h2>￥5,000-6,000</h2>
+				   	<p><i></i>1/5</p>
+				   </div>
+				   <dl class="pro-function">
+				   	<dd>功能、安全</dd>
+				   	<dd>21人报名</dd>
+				   </dl>
+				   <dl class="pro-des">
+				   	<dd class="type"><i><img src="images/APP.svg" alt=""></i>B/S</dd>
+				   	<dd>项目周期<span>30</span>天</dd>
+				   </dl>
+				   </a>
+				</div>
+
+				<div class="pro-list">
+				<a href="">
+				   <div class="pro-detail">
+				   	<div class="pro-imgbg"></div>
+					<img src="images/pro-img.png" alt="">
+					 <h3>USee视频聊天应用测试一、项目描述usee是一个在线直播视频web应用，需要在项目给定的框架上进行特定功...</h3>
+					 <p><i></i>55</p>
+					 <span>招募中</span>
+				   </div>
+				   <h3 class="pro-title">USee视频聊天应用测试<span>保证金</span></h3>
+				   <div class="pro-price">
+				   	<h2>￥5,000-6,000</h2>
+				   	<p><i></i>1/5</p>
+				   </div>
+				   <dl class="pro-function">
+				   	<dd>功能、安全</dd>
+				   	<dd>21人报名</dd>
+				   </dl>
+				   <dl class="pro-des">
+				   	<dd class="type"><i><img src="images/APP.svg" alt=""></i>Service</dd>
+				   	<dd>项目周期<span>30</span>天</dd>
+				   </dl>
+				   </a>
+				</div>
+
+				<div class="pro-list">
+				<a href="">
+				   <div class="pro-detail">
+				   	<div class="pro-imgbg"></div>
+					<img src="images/pro-img.png" alt="">
+					 <h3>USee视频聊天应用测试一、项目描述usee是一个在线直播视频web应用，需要在项目给定的框架上进行特定功...</h3>
+					 <p><i></i>55</p>
+					 <span>招募中</span>
+				   </div>
+				   <h3 class="pro-title">USee视频聊天应用测试<span>保证金</span></h3>
+				   <div class="pro-price">
+				   	<h2>￥5,000-6,000</h2>
+				   	<p><i></i>1/5</p>
+				   </div>
+				   <dl class="pro-function">
+				   	<dd>功能、安全</dd>
+				   	<dd>21人报名</dd>
+				   </dl>
+				   <dl class="pro-des">
+				   	<dd class="type"><i></i>C/S</dd>
+				   	<dd>项目周期<span>30</span>天</dd>
+				   </dl>
+				   </a>
+				</div>
+
+				<div class="pro-list">
+				<a href="">
+				   <div class="pro-detail">
+				   	<div class="pro-imgbg"></div>
+					<img src="images/pro-img.png" alt="">
+					 <h3>USee视频聊天应用测试一、项目描述usee是一个在线直播视频web应用，需要在项目给定的框架上进行特定功...</h3>
+					 <p><i></i>55</p>
+					 <span>招募中</span>
+				   </div>
+				   <h3 class="pro-title">USee视频聊天应用测试<span>保证金</span></h3>
+				   <div class="pro-price">
+				   	<h2>￥5,000-6,000</h2>
+				   	<p><i></i>1/5</p>
+				   </div>
+				   <dl class="pro-function">
+				   	<dd>功能、安全</dd>
+				   	<dd>21人报名</dd>
+				   </dl>
+				   <dl class="pro-des">
+				   	<dd class="type"><i></i>C/S</dd>
+				   	<dd>项目周期<span>30</span>天</dd>
+				   </dl>
+				   </a>
+				</div>
+
+				<div class="pro-list">
+				<a href="">
+				   <div class="pro-detail">
+				   	<div class="pro-imgbg"></div>
+					<img src="images/pro-img.png" alt="">
+					 <h3>USee视频聊天应用测试一、项目描述usee是一个在线直播视频web应用，需要在项目给定的框架上进行特定功...</h3>
+					 <p><i></i>55</p>
+					 <span>招募中</span>
+				   </div>
+				   <h3 class="pro-title">USee视频聊天应用测试<span>保证金</span></h3>
+				   <div class="pro-price">
+				   	<h2>￥5,000-6,000</h2>
+				   	<p><i></i>1/5</p>
+				   </div>
+				   <dl class="pro-function">
+				   	<dd>功能、安全</dd>
+				   	<dd>21人报名</dd>
+				   </dl>
+				   <dl class="pro-des">
+				   	<dd class="type"><i></i>C/S</dd>
+				   	<dd>项目周期<span>30</span>天</dd>
+				   </dl>
+				   </a>
+				</div>
+
+				<div class="pro-list">
+				<a href="">
+				   <div class="pro-detail">
+				   	<div class="pro-imgbg"></div>
+
+					<img src="images/pro-img.png" alt="">
+					 <h3>USee视频聊天应用测试一、项目描述usee是一个在线直播视频web应用，需要在项目给定的框架上进行特定功...</h3>
+					 <p><i></i>55</p>
+					 <span>招募中</span>
+				   </div>
+				   <h3 class="pro-title">USee视频聊天应用测试<span>保证金</span></h3>
+				   <div class="pro-price">
+				   	<h2>￥5,000-6,000</h2>
+				   	<p><i></i>1/5</p>
+				   </div>
+				   <dl class="pro-function">
+				   	<dd>功能、安全</dd>
+				   	<dd>21人报名</dd>
+				   </dl>
+				   <dl class="pro-des">
+				   	<dd class="type"><i></i>C/S</dd>
+				   	<dd>项目周期<span>30</span>天</dd>
+				   </dl>
+				   </a>
+				</div>
+			</div><!--project-list-->
+
+			<p class="show-more" style="display:none">显示更多</p>
+
+			<script>
+			         var i=6;//显示多少个项目列表
+			         var pro_list=$('.pro-list').length;
+			         if(pro_list>i){
+			         	$('.show-more').show();
+			         	for (; i < pro_list; i++) {
+			         	    $('.pro-list').eq(i).hide();
+			         	}
+			         }
+			         $('.show-more').click(function(){
+			         	var hiddenChildren = $('.pro-list:hidden');
+			         	var cnt = hiddenChildren.length;
+			         	for (var n = 0; n< i && n< cnt ; n++) {
+			         	    hiddenChildren.eq(n).show();
+			         	}
+			         	if(cnt<=i){
+			         	$('.show-more').hide();
+			            }
+			         })
+			        
+
+			        //样式控制
+			        //右上角状态，不同显示添加不同的class，从而得到不同背景和字体颜色
+			        $('.pro-detail span').each(function(){
+			        	if($(this).text()=='招募中'){
+                                               $(this).parents('.pro-list').addClass('zm-ing');
+			        	}
+			        	 if($(this).text()=='测试中'){
+                                                 $(this).parents('.pro-list').addClass('test-ing');
+                                          }
+                                          if($(this).text()=='已完成'){
+                                                  	$(this).parents('.pro-list').addClass('has-been');
+                                                  }
+			        })
+                                         
+                                         //项目类型
+                                         $('.type').each(function(){
+                                         	 if($(this).text()=='APP'){
+                                                 $(this). addClass('class-app');   
+                                         	 }
+                                         	 if($(this).text()=='B/S'){
+                                                 $(this). addClass('class-bs');   
+                                         	 }
+                                         	 if($(this).text()=='C/S'){
+                                                 $(this). addClass('class-cs');   
+                                         	 }
+                                         	 if($(this).text()=='Service'){
+                                                 $(this). addClass('class-service');   
+                                         	 }
+                                         })
+			</script>
+
+		</div><!--项目列表-->
+
+		<div class="foot">
+			<a href="" class="foot-logo"><embed src="images/logo-white.svg" type=""></a>
+			<p>Copyright 2016空心科技</p>
+		</div><!--foot-->
+	</div>
+</body>
+</html>

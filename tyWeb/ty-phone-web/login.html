@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<!--flexible 是适配各终端插件-->
+	<script type="text/javascript" src="js/flexible.js"></script>
+	<script type="text/javascript" src="js/flexible_css.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css"><!--首页+登录的单独样式-->
+</head>
+<body>
+
+	    <div class="head">
+			<a href="" class="logo"><embed src="images/logo-white.svg" type=""></a>
+			<span class="more-nav"></span>
+		</div><!--head-->
+		<div class="nav-show" style="display:none">
+			 <div class="nav-top">
+				<p><a href="">一键发布需求</a></p>
+				<span class="nav-close"></span>
+			 </div>
+			 <ul>
+				<li><a href="">导航1</a></li>
+				<li><a href="">导航2</a></li>
+				<li><a href="">导航3</a></li>
+				<li><a href="">导航4</a></li>
+				<li><a href="">导航5</a></li>
+				<li><a href="">个人中心</a></li>
+			 </ul>
+		 </div><!--隐藏导航-->
+		 <script>
+                          $('.more-nav').click(function(){
+                          	$('.nav-show').show();
+                          })
+                          $('.nav-close').click(function(){
+                          	$('.nav-show').hide();
+                          })
+		 </script>
+		 <!--head end-->
+
+		 
+		 <div class="login">
+		 	<img src="images/login-logo.png" class="login-logo" alt="">
+		 	<form action="">
+		 		<input type="email" placeholder="电子邮箱">
+		 		<input type="password" placeholder="密码">
+		 		<input type="submit" value="登录">
+		 	</form>
+		 </div>
+</body>
+</html>

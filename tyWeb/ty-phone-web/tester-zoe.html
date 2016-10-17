@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>项目集市--测试员对外个人中心</title>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<!--flexible 是适配各终端插件-->
+	<script type="text/javascript" src="js/flexible.js"></script>
+	<script type="text/javascript" src="js/flexible_css.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>               
+<body>
+	<div class="content project tester-zoe">
+	    <div class="head">
+			<a href="" class="logo"><embed src="images/logo-white.svg" type=""></a>
+			<span class="more-nav"></span>
+		</div><!--head-->
+		<div class="nav-show" style="display:none">
+			 <div class="nav-top">
+				<p><a href="">一键发布需求</a></p>
+				<span class="nav-close"></span>
+			 </div>
+			 <ul>
+				<li><a href="">导航1</a></li>
+				<li><a href="">导航2</a></li>
+				<li><a href="">导航3</a></li>
+				<li><a href="">导航4</a></li>
+				<li><a href="">导航5</a></li>
+				<li><a href="">导航6</a></li>
+			 </ul>
+		 </div>
+		 <script>
+                          $('.more-nav').click(function(){
+                          	$('.nav-show').show();
+                          })
+                          $('.nav-close').click(function(){
+                          	$('.nav-show').hide();
+                          })
+		 </script>
+		<div class="company-zoe personal">
+			<div class="zoe-head">
+				<img src="images/com-img.jpg" alt="" class="zoe-head-bg">
+				<p class="zlpm">站内排名<span>12</span></p>
+				<div class="com-detail">
+					<dl>
+						<dd class="com-img"><img src="images/win.png" alt=""></dd>
+						<dd class="com-base">
+							<h3>KOAN HK</h3>
+							<div class="com-score">
+							    <!--手机微信学历身份认证-->
+								<div class="com-equipment"><img src="images/phone-has.svg" alt=""><img src="images/wechat-has.svg" alt=""><img src="images/sf-has.svg" alt=""><img src="images/edu-has.svg" alt=""></div>
+                                 
+                                 <!--等级星星-->
+								<div class="company-grade"><img src="images/start-yellow.png" alt=""><img src="images/start-yellow.png" alt=""><img src="images/start-yellow.png" alt=""><img src="images/start-yellow.png" alt=""><img src="images/start-gray.png" alt=""><span class="com-pf">4.0</span></div>
+							</div>
+						</dd>
+					</dl>
+					<p class="com-vip-lev"><img src="images/lev-white1.png" alt="">会员</p>
+				</div>
+			
+			</div><!--企业信息head-->
+
+			<div class="com-project">
+				<dl>
+					<dd>
+						<h3>进行中的项目</h3>
+						<p>1</p>
+					</dd>
+					<dd>
+						<h3>发布过的项目</h3>
+						<p>5</p>
+					</dd>
+					<dd>
+						<h3>当前身价（元）</h3>
+						<p class="current-price">150/天</p>
+					</dd>
+				</dl>
+			</div><!--个人项目-->
+
+			<div class="participated">
+				<p class="pro-income">项目总收入（元）<span>5,000.00</span></p>
+				<h3>参与过的项目</h3>
+				<table>
+					<tr>
+						<td><p>APP</p><span>24</span></td>
+						<td><p>B/S</p><span>0</span></td>
+						<td><p>C/S</p><span>12</span></td>
+						<td><p>Service</p><span>5</span></td>
+					</tr>
+				</table>
+			</div><!--参与过的项目-->
+
+			<div class="com-details">
+				<h3>个人简介</h3>
+				<div class="com-jianshao">
+					<p>本人服务于天云科技由中国宽带产业资本（CBC，田溯宁博士创立）投资的创新创业型企业，是CBC云基地的骨干企业。田溯宁博士是亚信科技（NASDAQ上市企业）、中国网通的创始人、宽带资本董事长、云基地创始人。 </p>
+					<p>天云科技专注于智慧城市、云计算、大数据、移动互联网领域产业落地和投资。公司提供公有云、混合云、私有云服务、产品及解决方案，客户有中小企业、政府、军队、电力、电信运营商、金融、高性能计算、科技（软件）园区等。</p>
+					<p>天云科技在上海、北京、武汉等地设有分公司，市场覆盖华东、华中、华北、东北。</p>
+					<p>天云科技由中国宽带产业资本（CBC，田溯宁博士创立）投资的创新创业型企业，是CBC云基地的骨干企业。田溯宁博士是亚信科技（NASDAQ上市企业）、中国网通的创始人、宽带资本董事长、云基地创始人。 </p>
+					<p>天云科技专注于智慧城市、云计算、大数据、移动互联网领域产业落地和投资。公司提供公有云、混合云、私有云服务、产品及解决方案，客户有中小企业、政府、军队、电力、电信运营商、金融、高性能计算、科技（软件）园区等。</p>
+					<p>天云科技在上海、北京、武汉等地设有分公司，市场覆盖华东、华中、华北、东北。</p>
+
+				</div><!--js控制显示260个字-->
+				<span class="more-js"></span><!--更多展示-->
+			</div><!--个人简介-->
+
+			<div class="undergo job-undergo">
+				<h3>工作经历</h3>
+				<div class="undergo-con">
+					<div class="undergo-list job-list">
+						<h4>盛典东一科技有限公司<span>2014.06- 至今</span></h4>
+						<p class="jobs">Java开发</p>
+						<p class="job-content">负责公司微信公众号的开发与测试，还有云南朵以直营店的企业管理系统等。</p>
+					</div><!--list-->
+				</div>
+               <span class="more-undergo"></span><!--更多展示/此处的js没有写，如果点击后给span添加‘shouqi’的class，按钮图标就会更换；后面效果同理-->
+			</div><!--工作经历-->
+
+			<div class="undergo pro-undergo">
+				<h3>项目经历</h3>
+				<div class="undergo-con">
+					<div class="undergo-list pro-list">
+					 <h4>盛典东一科技有限公司<span>2014.06- 至今</span></h4>
+					 <p class="work-main">主要负责公众号的功能开发测试与日常维护工作。</p>
+					 <p class="pro-content">这个项目主要是对公司微信公众号的新功能的开发与测试工作等。</p>
+					</div><!--list-->
+
+					<div class="undergo-list pro-list">
+					 <h4>盛典东一科技有限公司<span>2014.06- 至今</span></h4>
+					 <p class="work-main">主要负责公众号的功能开发测试与日常维护工作。</p>
+					 <p class="pro-content">这个项目主要是对公司微信公众号的新功能的开发与测试工作等。</p>
+					</div><!--list-->
+				</div>
+				<span class="more-undergo shouqi"></span><!--此处写的是展开效果，按钮span添加了‘shouqi’的class；如果想按钮是未展开状态去掉该class即可-->
+			</div><!--项目经历-->
+
+			<div class="undergo edu-undergo">
+				<h3>教育经历</h3>
+				<div class="undergo-con">
+				  <div class="undergo-list edu-list">
+				      <h4>湖北大学计算机需要<span>2010.09-2014.07</span></h4>
+				      <p class="specialty">计算机专业&nbsp;&nbsp;|&nbsp;&nbsp; 研究生</p>
+				  </div><!--list-->
+				</div>
+				<span class="more-undergo"></span>
+			</div><!--教育经历-->
+
+			<div class="pro-evaluate">
+				<h3>项目评价<span>（231）</span></h3>
+				<div class="evaluate-list">
+					<div class="evaluate-info"><img src="images/company.png" alt="" class="user-img"><span>武汉天云科技有限公司</span><img src="images/lev3.png" class="user-lev" alt=""><img src="images/rz-has.png" class="com-rz" alt="">
+					</div>
+					<p class="evaluate-detail">测试员能力很强，能够快速完成测试任务。</p>
+					<p class="evaluate-time"><i></i>2015－11－23&nbsp;&nbsp;&nbsp;&nbsp;12:21:00</p>
+				</div>
+				<span class="more-evaluate"><a href="">查看更多评价</a></span>
+			</div><!--评论-->
+		</div>
+           
+           <script>
+
+           //公司简介显示隐藏
+                   //初始化
+           	var text=$('.com-jianshao') .html();
+           	var a=260;//公司简介显示的字数
+           	showtext=text.substring(0,a);
+           	$('.com-jianshao') .html(showtext)
+           	//点击
+           	$('.more-js').click(function(){
+           		var text2=$('.com-jianshao') .html();
+           		var num=a+4;
+           		if(text2.length<=num){
+           			$('.com-jianshao') .html(text);
+           			$(this).addClass('shouqi');
+           		}
+           		else if(text2.length>num){
+                                      $('.com-jianshao') .html(showtext);
+                                      $(this).removeClass('shouqi');
+           		}
+           		
+           	})
+           	
+           </script>
+		<div class="foot">
+			<a href="" class="foot-logo"><embed src="images/logo-white.svg" type=""></a>
+			<p>Copyright 2016空心科技</p>
+		</div><!--foot-->
+	</div>
+</body>
+</html>

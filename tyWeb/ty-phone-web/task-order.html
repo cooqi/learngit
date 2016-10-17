@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心--任务单</title>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<!--flexible 是适配各终端插件-->
+	<script type="text/javascript" src="js/flexible.js"></script>
+	<script type="text/javascript" src="js/flexible_css.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<body>
+
+	<div class="content project">
+		<div class="head">
+			<a href="" class="logo"><embed src="images/logo.svg" type=""></a>
+			<span class="more-nav"></span>
+		</div><!--head-->
+		<div class="nav-show" style="display:none">
+			 <div class="nav-top">
+				<p><a href="">一键发布需求</a></p>
+				<span class="nav-close"></span>
+			 </div>
+			 <ul>
+				<li><a href="">导航1</a></li>
+				<li><a href="">导航2</a></li>
+				<li><a href="">导航3</a></li>
+				<li><a href="">导航4</a></li>
+				<li><a href="">导航5</a></li>
+				<li><a href="">导航6</a></li>
+			 </ul>
+		 </div>
+		 <script>
+                          $('.more-nav').click(function(){
+                          	$('.nav-show').show();
+                          })
+                          $('.nav-close').click(function(){
+                          	$('.nav-show').hide();
+                          })
+		 </script>
+
+           <div class="task">
+                 <div class="company-info">
+                   <img src="images/company.png" alt="" class="company-logo">
+                   <div class="com-message">
+                         <h3>武汉天云科技有限公司<img src="images/lev1.png" alt="" class="com-lev"><img src="images/rz-has.png" alt="" class="com-rz"></h3>
+                         <p class="com-mobile">137-2589-5689</p>
+                   </div>
+                 </div><!--公司信息-->
+
+                 <div class="task-info">
+                 	<dl class="time-price">
+                 		<dd><p>支付金额(元/天)</p><span>280.00</span></dd>
+                 		<dd><p>测试时间(天)</p> <span>15</span></dd>
+                 	</dl>
+                 	<dl class="totle-income">
+                 		<dd>本项目将获总收入(元)</dd>
+                 		<dd><span>+1,500.00</span></dd>
+                 	</dl>
+                 </div><!--任务金额时间-->
+
+                 <div class="task-detail">
+                 	<div class="detail-list">
+                 		<h3>软件类型</h3>
+                 		<p class="describe">App</p>
+                 	</div>
+
+                 	<div class="detail-list">
+                 		<h3>测试类型</h3>
+                 		<p class="describe">功能测试、性能测试</p>
+                 	</div>
+
+                 	<div class="detail-list">
+                 		<h3>测试秒速</h3>
+                 		<ul class="describe">
+                              <li>规格要求 </li>
+                              <li>运行平台 </li>
+                              <li>ubuntu 14.04 (服务器端) </li>
+                              <li>chrome desktop (客户端) </li>
+                              <li>技术框架 </li>
+                              <li>Nginx SocketStream (Nodejs)</li>
+                              <li>功能实现 对默认demo程序进行修改, 使其具有以下功能: </li>
+                              <li>1, 登录(含第三方), 注册</li>
+                              <li>支持twitter, weibo</li>
+                              <li>支持手机短信注册 </li>
+                              <li>2, 视频播放器(video.js),</li> 用于播放直播视频(HLS/rtmp)</li>
+                              <li>包含H5播放控件相关接口</li>
+                              <li>提供弹幕显示接口 </li>
+                              <li>3, 实时聊天区(websocket)</li>
+                              <li>聊天区内容可以是富文本/图片或链接(http) </li>
+                              <li>4, Nginx部署
+                              <li>只开放 80, 443端口</li>
+                              <li>提供静态文件对接CDN接口</li>
+                              <li>websocket 通过端口转发实现。</li>
+                 		</ul>
+                 	</div>
+                 	<div class="detail-list">
+                 		<h3>交付要求</h3>
+                 			<ul class="describe">
+                 				<li>源代码，需要随时把最新的代码 Push 到指定的私有项目中。</li>
+                 				<li>代码仓库, 使用coding及bitbucket两份, 产品最终验收后要提交一份到bitbucket</li>
+                 				<li>交付文档说明，描述基本技术框架。</li>
+                 			</ul>
+                 	</div>
+
+                 </div><!--任务详情-->
+
+           </div><!--task order-->
+
+
+
+
+            <div class="foot">
+            	<a href="" class="foot-logo"><embed src="images/logo-white.svg" type=""></a>
+            	<p>Copyright 2016空心科技</p>
+            </div><!--foot-->
+          </div>
+	
+</body>
+</html>
