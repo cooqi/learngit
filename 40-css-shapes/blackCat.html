@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+	<style>
+       .blackCat{width: 500px;height: 500px;border:10px solid #000;margin:30px auto;position: relative;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+       }
+       .blackCat .cap{width: 100px;height:0;border:60px solid transparent;border-top-color: #000;margin:50px auto;}
+       .blackCat .cap #star{display:block;width:50px;height:50px;margin:-25px auto 0;}
+       .eyes{overflow: hidden;height: 70px;width: 300px;margin:-80px auto 0;}
+       .eyes .eye-left,.eyes .eye-right{width: 70px;height: 24px;border:5px solid #000;position: relative;float: left;margin-top: 20px;
+        -webkit-border-radius: 0 300px 200px 500px;
+        -moz-border-radius: 0 300px 200px 500px;
+        border-radius: 0 300px 200px 500px;
+        -webkit-transform: rotate(25deg);
+        -moz-transform: rotate(25deg);
+        transform: rotate(25deg);
+       }
+       .eyes .eye-left:before,.eyes .eye-right:before{position: absolute;content: '';width: 34px;height: 24px;right: 0;top:0;z-index: -1;
+       -webkit-border-radius: 30px 50px 30px 30px;
+       -moz-border-radius: 30px 50px 30px 30px;
+       border-radius: 30px 50px 30px 30px;
+       background: -webkit-linear-gradient(-45deg,rgba(61,4,1,.9),rgba(5,183,249,.7),rgba(229,153,254,.5));
+       background: -moz-linear-gradient(-45deg,rgba(61,4,1,.9),rgba(5,183,249,.7),rgba(229,153,254,.5));
+       background: linear-gradient(-45deg,rgba(61,4,1,.9),rgba(5,183,249,.7),rgba(229,153,254,.5));
+   }
+       .eyes .eye-left #eyeStar{display: block;margin-left: 50px;}
+
+       .eyes .eye-right{
+       	-webkit-border-radius:300px 0 500px  200px ;
+       	-moz-border-radius:300px 0 500px  200px ;
+       	border-radius:300px 0 500px  200px ;
+       	-webkit-transform: rotate(-25deg);
+       	-moz-transform: rotate(-25deg);
+       	transform: rotate(-25deg);
+       	float: right;}
+       .eyes .eye-right:before{
+       	background: -webkit-linear-gradient(45deg,rgba(61,4,1,.9),rgba(5,183,249,.7),rgba(229,153,254,.5));
+       	background: -moz-linear-gradient(45deg,rgba(61,4,1,.9),rgba(5,183,249,.7),rgba(229,153,254,.5));
+       	background: linear-gradient(45deg,rgba(61,4,1,.9),rgba(5,183,249,.7),rgba(229,153,254,.5));
+       	-webkit-border-radius: 50px 30px 30px 30px;
+       	-moz-border-radius: 50px 30px 30px 30px;
+       	border-radius: 50px 30px 30px 30px;
+       	left: 0;}
+       .eyes .eye-right #eyeStar{display: block;margin-left: 5px;}
+
+       .ear{width: 400px;position: absolute;top: 50px;left: 0;right: 0;margin:auto;}
+       .ear .leftEar,.ear .rightEar{width: 0;height: 0;border-left: 40px solid transparent;border-right: 40px solid transparent;border-bottom: 70px solid #000;position: relative;float: left;
+       	-webkit-transform: rotate(-30deg);
+       	-moz-transform: rotate(-30deg);
+       	transform: rotate(-30deg);
+       }
+       .ear .leftEar:before,.ear .rightEar:before{position: absolute;content: '';width: 0;height: 0;border-left: 30px solid transparent;border-right: 30px solid transparent;border-bottom: 40px solid #fff;left:-30px;top:42px;}
+       .ear .rightEar{float: right;
+       	-webkit-transform: rotate(30deg);
+       	-moz-transform: rotate(30deg);
+       	transform: rotate(30deg);
+       }
+
+       .beard{height: 120px;width: 400px;margin:20px auto 0;overflow: hidden;}
+       .beard .leftBeard,.beard .rightBeard{width: 80px;height: 6px;background: #000;float: left;position: relative;margin-top: 30px;
+       	-webkit-border-radius:6px;
+       	-moz-border-radius:6px;
+       	border-radius:6px;
+       }
+       .beard .leftBeard:before,.beard .leftBeard:after,.beard .rightBeard:before,.beard .rightBeard:after{position: absolute;content: '';width: 80px;height: 6px;background: #000;transform-origin: right center; top: -10px;
+       -webkit-border-radius:6px;
+       -moz-border-radius:6px;
+       border-radius:6px;
+       -webkit-transform: rotate(10deg);
+       -moz-transform: rotate(10deg);
+       transform: rotate(10deg);
+   }
+       .beard .leftBeard:after{top: 10px;
+       	-webkit-transform: rotate(-10deg);
+       	-moz-transform: rotate(-10deg);
+       	transform: rotate(-10deg);
+       }
+       .beard .rightBeard{float: right;}
+       .beard .rightBeard:before,.beard .rightBeard:after{transform-origin: left center;
+       	-webkit-transform: rotate(-10deg);
+       	-moz-transform: rotate(-10deg);
+       	transform: rotate(-10deg);
+       }
+       .beard .rightBeard:after{top:10px;
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        transform: rotate(10deg);
+       }
+
+       .nose{width: 80px;height: 40px;margin:-100px auto;}
+       .nose span{display:block;width: 0px;height:0px;border-width: 40px;border-style: solid;border-color:  transparent transparent #000 transparent}
+       .logo{font-size: 50px;font-weight: bold;text-align: center;margin:10px;}
+
+       .whiteBG{background: #000;}
+       .whiteBG .cap{border-top-color:#fff;}
+       .whiteBG .eyes .eye-left,.whiteBG .eyes .eye-right{border-color: #fff}
+       .whiteBG .ear .leftEar,.whiteBG .ear .rightEar{border-bottom-color: #fff}
+       .whiteBG .beard .leftBeard,.whiteBG .beard .rightBeard,.whiteBG .beard .leftBeard:before,.whiteBG .beard .leftBeard:after,.whiteBG .beard .rightBeard:before,.whiteBG .beard .rightBeard:after{background: #fff}
+       .whiteBG .ear .leftEar:before,.whiteBG .ear .rightEar:before{border-bottom-color: #000}
+       .whiteBG .logo{color: #fff;}
+	</style>
+</head>
+<body>
+  <div class="blackCat">
+  	<div class="cap">
+       <svg width="50" id="star" height="50" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g class="transform-group"><g transform="scale(0.1953125, 0.1953125)"><path d="M511.949856 155.875117 626.390991 387.750161 882.290703 424.931992 697.119768 605.421716 740.83315 860.276125 511.949856 739.950665 283.065538 860.276125 326.778921 605.421716 141.607985 424.931992 397.507697 387.750161Z" fill="url(#purple)"></path></g></g>
+        <defs>
+   	      <linearGradient id="purple" x1="100%" y1="100%" x2="0%" y2="0%">
+   	         <stop offset="0%" stop-color="#fcca03"/>
+             <stop offset="100%" stop-color="#f77f3e"/>
+   	      </linearGradient>
+        </defs>
+      </svg>
+  	</div>
+  	<div class="eyes">
+  		<div class="eye-left">
+  			 <svg width="15" id="eyeStar" height="15" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g class="transform-group"><g transform="scale(0.1953125, 0.1953125)"><path d="M511.949856 155.875117 626.390991 387.750161 882.290703 424.931992 697.119768 605.421716 740.83315 860.276125 511.949856 739.950665 283.065538 860.276125 326.778921 605.421716 141.607985 424.931992 397.507697 387.750161Z" fill="#ffffff"></path></g></g>
+             </svg>
+  		</div>
+  		<div class="eye-right">
+  			<svg width="15" id="eyeStar" height="15" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g class="transform-group"><g transform="scale(0.1953125, 0.1953125)"><path d="M511.949856 155.875117 626.390991 387.750161 882.290703 424.931992 697.119768 605.421716 740.83315 860.276125 511.949856 739.950665 283.065538 860.276125 326.778921 605.421716 141.607985 424.931992 397.507697 387.750161Z" fill="#ffffff"></path></g></g>
+            </svg>
+  		</div>
+  	</div>
+  	<div class="ear">
+  		<div class="leftEar"></div>
+  		<div class="rightEar"></div>
+  	</div>
+  	<div class="beard">
+  		<div class="leftBeard"></div>
+  		<div class="rightBeard"></div>
+  	</div>
+  	<!--<div class="nose"> <span></span></div>-->
+
+  	<p class="logo">BLACK CAT</p>
+  </div>
+
+    <div class="blackCat whiteBG">
+  	<div class="cap">
+       <svg width="50" id="star" height="50" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g class="transform-group"><g transform="scale(0.1953125, 0.1953125)"><path d="M511.949856 155.875117 626.390991 387.750161 882.290703 424.931992 697.119768 605.421716 740.83315 860.276125 511.949856 739.950665 283.065538 860.276125 326.778921 605.421716 141.607985 424.931992 397.507697 387.750161Z" fill="url(#purple)"></path></g></g>
+        <defs>
+   	      <linearGradient id="purple" x1="100%" y1="100%" x2="0%" y2="0%">
+   	         <stop offset="0%" stop-color="#fcca03"/>
+             <stop offset="100%" stop-color="#f77f3e"/>
+   	      </linearGradient>
+        </defs>
+      </svg>
+  	</div>
+  	<div class="eyes">
+  		<div class="eye-left">
+  			 <svg width="15" id="eyeStar" height="15" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g class="transform-group"><g transform="scale(0.1953125, 0.1953125)"><path d="M511.949856 155.875117 626.390991 387.750161 882.290703 424.931992 697.119768 605.421716 740.83315 860.276125 511.949856 739.950665 283.065538 860.276125 326.778921 605.421716 141.607985 424.931992 397.507697 387.750161Z" fill="#ffffff"></path></g></g>
+             </svg>
+  		</div>
+  		<div class="eye-right">
+  			<svg width="15" id="eyeStar" height="15" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g class="transform-group"><g transform="scale(0.1953125, 0.1953125)"><path d="M511.949856 155.875117 626.390991 387.750161 882.290703 424.931992 697.119768 605.421716 740.83315 860.276125 511.949856 739.950665 283.065538 860.276125 326.778921 605.421716 141.607985 424.931992 397.507697 387.750161Z" fill="#ffffff"></path></g></g>
+            </svg>
+  		</div>
+  	</div>
+  	<div class="ear">
+  		<div class="leftEar"></div>
+  		<div class="rightEar"></div>
+  	</div>
+  	<div class="beard">
+  		<div class="leftBeard"></div>
+  		<div class="rightBeard"></div>
+  	</div>
+  	<!--<div class="nose"> <span></span></div>-->
+
+  	<p class="logo">BLACK CAT</p>
+  </div>
+</body>
+</html>
