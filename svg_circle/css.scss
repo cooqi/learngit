@@ -8,7 +8,7 @@ svg{transform:rotate(-90deg)}
 .progressa{
 	stroke-dasharray:$circumference;
 	stroke-dashoffset:$circumference;
-	animation:progressa 1.6s linear .5s forwards;
+	animation:progressa 1.6s linear .1s forwards;
 	transition:stroke-dasharray .4s linear;
 }//SVG提供了stroke-dasharray和stroke-dashoffset两个属性，它们可以将刚才的圆形的轮廓变成虚线
 
