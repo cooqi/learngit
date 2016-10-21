@@ -7,10 +7,11 @@
     <style>
      .circle{width: 200px;height: 200px;position: absolute;border-radius: 50%;background: #0cc}
      .pie_right,.pie_left{width: 200px;height: 200px;position: absolute;top: 0;left: 0;}
-     .right,.left{width: 200px;height: 200px;background: #00aacc;border-radius: 50%;position: absolute;top: 0;left: 0;display: block;}
+     .right,.left{width: 200px;height: 200px;background: #00aacc;border-radius: 50%;position: absolute;top: 0;left: 0;display: block;transition: all ease .3s }
      .pie_right,.right{clip: rect(0,auto,auto,100px);}
      .mask{width:150px;height: 150px;border-radius: 50%;left:25px;top:25px;background: #fff;position: absolute;text-align: center;;line-height: 150px;font-size: 20px;}
      .pie_left,.left{clip:rect(0,100px,auto,0);}
+     .left{transition: all .2s linear .3s}
     </style>
 </head>
 <body>
@@ -21,7 +22,7 @@
    <div class="pie_right">
      <div class="right"></div>
    </div>
-   <div class="mask"><span>70</span>%</div>
+   <div class="mask"><span>30</span>%</div>
   </div>
   <script>
     $(function() {
