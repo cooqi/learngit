@@ -4,7 +4,7 @@ svg {
 .progressa {
   stroke-dasharray: 565.48667;
   stroke-dashoffset: 565.48667;
-  animation: progressa 1.6s linear .5s forwards;
+  animation: progressa 1.6s linear .1s forwards;
   transition: stroke-dasharray .4s linear; }
 
 @keyframes progressa {
@@ -12,5 +12,3 @@ svg {
     stroke-dashoffset: 565.48667; }
   100% {
     stroke-dashoffset: 96.13273; } }
-
-/*# sourceMappingURL=css.css.map */

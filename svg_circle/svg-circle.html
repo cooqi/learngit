@@ -4,22 +4,26 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css.css">
+	<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
 </head>
 <body>
 	
-	<svg width="240" height="240" xmlns="http://www.w3.org/2000/svg">
+	<svg width="240" height="240" xmlns="http://www.w3.org/2000/svg" class="cir">
 	    <!--第一个圆-->
-		<circle class="backdrop" r="90" cy="120" cx="120" stroke="#333" stroke-width="3" fill="yellow"/>
+		<circle class="backdrop" r="90" cy="120" cx="120" stroke="#333" stroke-width="20" fill="yellow"/>
 		<!--绘制一个圆，r半径，cy、cx是圆心位置，stroke描边，fill填充颜色-->
 
 		<!--第二个圆-->
-		<circle class="progressa" r="90" cy="120" cx="120" stroke="url(#purple)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="yellow"/>
+		<circle class="progressa" r="90" cy="120" cx="120" stroke="url(#purple)" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" fill="yellow"/>
 		<!--
             stroke-linecap 属性可以让你在线条末端控制图形。你可以选择对接(butt)、方形(square)和圆形(round)
 
             stroke-linejoin 属性也是类似的，但是它控制的是两条线段之间的衔接。你可以在绘制折线时使用它。它有三个值，尖角(miter)、圆角(round)和斜角(bevel)
 		-->
-
+          <text fill="#000" x="120" y="120">
+            <tspan>30</tspan>
+            <tspan>%</tspan>
+          </text>
 		<defs>
 			<linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="0%">
 			<!--
@@ -42,9 +46,22 @@
 
 			-->
               <stop offset="0%" stop-color="#7a5bcf"/>
-              <stop offset="100%" stop-color="#8A6FD5"/>
+              <stop offset="100%" stop-color="red"/>
 			<linearGradient/><!--线性渐变  <linearGradient> 标签必须嵌套在 <defs> 的内部-->
 		</defs><!--defs绘制的图形不能直接显示在svg里面，需要调用到指定位置-->
 	</svg>
+
+
+	<script>
+	$(function(){
+		var radius =$('.cir').find('circle').attr("r");
+		console.log(radius)
+	})
+		/*var radius:90;//半径
+$percent:83;//百分比
+
+$circumference:(3.1415926* (2*$radius));//周长
+$stroke_percentage:$circumference - (($percent / 100) * $circumference);//显示的长度*/
+	</script>
 </body>
 </html>

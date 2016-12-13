@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5中的SVG属性实现圆形进度条效果</title>
+	<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+	<style>
+	.ring{width: 440px;height: 440px;position: relative;}
+	.ring p.num{font-size: 50px;text-align: center;position: absolute;top:0;bottom: 0;margin:auto;height: 50px;line-height: 50px;width: 100%;font-weight: bold;}
+	.ring svg{transform: rotate(-90deg);}
+	 #c1{
+	      animation:c1 1.6s linear .1s forwards;
+	      transition:stroke-dasharray .4s linear;
+        }
+	</style>
+</head>
+<body>
+<div class="ring">
+    <p class="num"><span>70</span>%</p>
+	<svg width="440" height="440" class="cir">
+	    <circle cx="220" cy="220" r="170" stroke-width="40" stroke="#C9CACA" fill="none" class="cir"></circle>
+	    <circle id="c1" cx="220" cy="220" r="170" stroke-width="40" stroke="url(#purple)" fill="none"  stroke-linejoin="round" stroke-linecap="round"></circle>
+
+	    <defs>
+			<linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#7a5bcf"/>
+              <stop offset="100%" stop-color="#E73468"/>
+			<linearGradient/>
+		</defs>
+	</svg>
+</div>
+	<script>
+	var circle = $('#c1');
+	var r =$('.cir').find('circle').attr("r");//半径
+	var perimeter = Math.PI * 2 * r;//周长
+	circle.attr('stroke-dasharray', perimeter);
+	circle.attr('stroke-dashoffset', perimeter);
+	var percent = ($('p.num').find('span').text())/100;//百分比转小数 去掉.replace(/%/g, "")
+	var keyframes='@keyframes c1{0%{stroke-dashoffset:' + perimeter +'}\n' + '100%{stroke-dashoffset:' + perimeter * (1- percent) +'}\n}' ;
+
+	//创建style
+	var style = document.createElement('style');
+	style.type = 'text/css';
+	style.innerHTML = keyframes;
+	document.getElementsByTagName('head')[0].appendChild(style);
+	this.stylesheet = document.styleSheets[document.styleSheets.length-1];
+	try {
+	    this.stylesheet.insertRule( rule , this.stylesheet.rules.length);
+	} catch (e) {
+	};
+
+
+	</script>
+</body>
+</html>
