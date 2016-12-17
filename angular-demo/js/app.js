@@ -9,6 +9,12 @@ myWebApp.config(function($routeProvider){
 	}).when('/accordion',{
 		templateUrl:'tpls/accordion.html',
 		controller:'accordionCtrl'
+	}).when('/form',{
+		templateUrl:'tpls/form.html',
+		controller:'formCtrl'
+	}).when('/todoList',{
+		templateUrl:'tpls/todoList.html',
+		controller:'todoListCtrl'
 	}).otherwise({
 		redirectTo:'/index'
 	})

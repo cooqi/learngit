@@ -4,3 +4,6 @@
 #filterTable hr{background: #000;height: 1px;}
 .eventr{color: red;}
 .oddtr{color: blue;}
+
+#todoList ol,#todoList ol li{list-style-type:demical;}
+#todoList ol li span{padding-left: 10px;color: lightskyblue;cursor: pointer;}

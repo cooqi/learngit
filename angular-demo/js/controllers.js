@@ -106,8 +106,53 @@ cartApp.controller('accordionCtrl',['$scope','$http',function($scope,$http){
 	})
 }])
 
+cartApp.controller('formCtrl',['$scope','$http',function($scope,$http){
+	$http.get("json/form.json")
+	.success(function(data){
+		$scope.hobby=data.hobby
+	});
+	
+	$scope.data={
+		//默认爱好数据
+		hobbise:[1,2],
+		
+		//默认city数据
+		city:'武汉'
+	}
+	$scope.toggleHobby=function(id){
+		var index=$scope.data.hobbise.indexOf(id);
+		if(index==-1){
+			$scope.data.hobbise.push(id)
+		}else{
+			$scope.data.hobbise.splice(index,1)
+		}
+		console.log($scope.data.hobbise)
+	}
+	
+	$http.get("json/city.json")
+	.success(function(data){
+		$scope.cities=data.cities;
+	});
+	
+	console.log($scope.cities)
+	
+}])
 
 
+cartApp.controller('todoListCtrl',['$scope',function($scope){
+	$scope.todolist=['nihao','shijie'];
+	$scope.add=function(){
+		$scope.todolist.push($scope.txt);   //表单数据插入todolist
+		$scope.txt="";   //清空当前表单
+		return false;	//阻止表单提交
+	}
+	$scope.del=function(index){
+		$scope.todolist.splice(index,1);	//清除当前选中数据
+	}
+	$scope.delAll=function(){
+		$scope.todolist=[];
+	}
+}])
 
 
 

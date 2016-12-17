@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="container" id="todoList">
+			<h3>todoList</h3>
+			<form action="" class="form-horizontal" ng-submit="add()">
+				<div class="form-group">
+					<label for="" class="col-md-2 control-label">请输入：</label>
+					<div class="col-md-10">
+						<input type="text" class="form-contol" ng-model="txt"/>
+					</div>
+				</div>
+			</form>
+			<ol>
+				<li ng-repeat="list in todolist track by $index">{{list}}<span ng-click="del($index)">x</span></li>
+			</ol>
+			<p ng-hide="todolist.length===0">此时有{{todolist.length}}项列表</p>
+			<button type="button" class="btn btn-danger" ng-hide="todolist.length===0" ng-click="delAll()">清空所有</button>
+		</div>
+	</body>
+</html>
