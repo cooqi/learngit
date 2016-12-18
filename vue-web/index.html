@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link href="css/css.css" type="text/css" rel="stylesheet"/>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/vue.min.js"></script> 
+		
+		<!--[if IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![end if]-->
+	</head>
+	<body>
+		<div id="app" class="todolist">
+			<h3>todolist</h3>
+			<form action="" @submit="add">
+				<input type="text" v-model="txt" />
+			</form>
+			<ol>
+				<li v-for="(todo,index) in todolist">{{todo}} <span @click="del(index)">x</span></li>
+			</ol>
+			<p v-show="todolist.length>0">现在有{{todolist.length}}项数据</p>
+			
+			<ul>
+				<li v-for="book in books">{{book.id}}---{{book.name}}</li>
+			</ul>
+		</div>
+		<script>
+	/*function pushDom(data){	
+	 	new Vue({
+				el:'#app',
+				ready:function(){
+					this.$http.get('json/testbooks.json', function(data) {
+						this.$set('books', data.books);
+					}).error(function(data, status, request) {
+						console.log('fail' + status + "," + request);
+					})
+				},
+				data:{
+					txt:'',
+					todolist:['12'],
+					books:data.books
+				},
+				methods:{
+					add:function(e){
+						this.todolist.push(this.txt);
+						this.txt='';
+						e.preventDefault()
+					},
+					del:function(index){
+						this.todolist.splice(index,1)
+					}
+				}
+			})
+	} 	
+	 	 $.ajax({
+        type:'get',
+        url:'json/testbooks.json',
+        success: function(data,textStatus){
+        	console.log(textStatus)
+        	console.log(data.success)
+
+                pushDom(data);
+
+        },
+        error: function(data){
+            alert(JSON.stringify(data));
+        }
+    });*/
+   var vm=new Vue({
+				el:'#app',
+				data:{
+					txt:'',
+					todolist:['12'],
+					books:''
+				},
+				methods:{
+					add:function(e){
+						this.todolist.push(this.txt);
+						this.txt='';
+						e.preventDefault()
+					},
+					del:function(index){
+						this.todolist.splice(index,1)
+					},
+				}
+			});
+			
+	$.ajax({
+        type:'get',
+        url:'json/testbooks.json',
+        success: function(data,textStatus){
+                vm.books=data.books
+        },
+        error: function(data){
+            alert(JSON.stringify(data));
+        }
+    });
+		</script>
+	</body>
+</html>
